@@ -1,0 +1,18 @@
+🛠️ Simulação de Dados de PH (Opcional 1 - Monitor Serial)
+Devido a problemas de leitura analógica em simuladores (analogRead() falhando no LDR), 
+o projeto utiliza uma técnica avançada de leitura de dados via Monitor Serial. 
+Isso simula a integração de dados externos (como uma API pública de PH, ou uma API de Chuva, conforme o Projeto Opcional 1).
+
+Para testar o pH:
+
+Inicie a simulação.
+
+Abra o Monitor Serial.
+
+Envie o valor de PH desejado (entre 0 e 4095) e pressione Enter.
+
+Para PH OK (Ácido): Envie 1500
+
+Para PH Falha (Neutro/Alcalino): Envie 3000
+
+Pressione o botão Gatilho (D4) para testar a nova leitura.

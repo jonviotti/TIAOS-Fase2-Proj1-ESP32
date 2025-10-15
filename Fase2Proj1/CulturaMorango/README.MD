@@ -62,16 +62,6 @@ O Morango é uma cultura sensível que requer solo **ácido** e umidade constant
 A lógica implementada garante que a bomba só seja acionada em condições de **necessidade** (água baixa) **E** **qualidade** (pH e NPK adequados). A rega é um evento de 3 segundos acionado pelo botão D4 (Gatilho).
 
 
-## 🌱 Especificações da Cultura: Morango
-
-O Morango é uma cultura sensível que requer solo **ácido** e umidade constante, mas sem excesso.
-
-| Parâmetro | Requisito da Cultura | Faixa de Decisão no Código V8 |
-| :--- | :--- | :--- |
-| **Umidade do Solo** | Manter sempre úmido. | **< 40%** (Precisa Regar) |
-| **PH do Solo** | Solo **ácido** (ideal 5.5 a 6.5). | **1024 a 2048** (Escala analógica de 0-4095) |
-| **NPK** | Alto requisito de P e K. | **Todos OK** (Nenhum botão de N, P ou K pressionado) |
-
 ## 🚀 Instruções de Execução e Teste
 
 Para testar a lógica completa, utilize a seguinte sequência no simulador Wokwi:

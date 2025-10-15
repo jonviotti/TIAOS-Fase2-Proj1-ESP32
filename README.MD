@@ -19,7 +19,7 @@
 
 ## Vídeo demonstrativo:
 
-- <a href="https://youtu.be/xPqIVx_-v4E">Video demostrativo -Sistema de Irrigação Inteligente</a>
+- <a href="https://youtu.be/gVqtmqRQorA">Video demostrativo -Sistema de Irrigação Inteligente</a>
 
 ## 👩‍🏫 Professores:
 ### Tutor(a) 

@@ -81,26 +81,6 @@ O Morango é uma cultura sensível que requer solo **ácido** e umidade constant
 
 A lógica implementada garante que a bomba só seja acionada em condições de **necessidade** (água baixa) **E** **qualidade** (pH e NPK adequados). A rega é um evento de 3 segundos acionado pelo botão D4 (Gatilho).
 
-```cpp
-// A bomba SÓ liga se TODAS as condições forem TRUE.
-
-bool precisa_regar = (umidade < UMIDADE_MINIMA); 
-bool ph_aceitavel = (leitura_ph >= 1024 && leitura_ph <= 2048); 
-bool npk_adequado = (N_OK && P_OK && K_OK); 
-
-if (precisa_regar) {
-    if (npk_adequado && ph_aceitavel) {
-        // CONDIÇÃO PARA LIGAR A BOMBA: Água baixa E Qualidade OK.
-        digitalWrite(PINO_BOMBA, HIGH); 
-        // ... rega por 3 segundos
-    } else {
-        // CONDIÇÃO PARA NÃO REGAR: Umidade baixa, mas NPK ou PH Falhando.
-        digitalWrite(PINO_BOMBA, LOW); 
-    }
-} else {
-    // Umidade OK ou Alta.
-    digitalWrite(PINO_BOMBA, LOW);
-}
 
 ## 🌱 Especificações da Cultura: Morango
 
@@ -112,30 +92,19 @@ O Morango é uma cultura sensível que requer solo **ácido** e umidade constant
 | **PH do Solo** | Solo **ácido** (ideal 5.5 a 6.5). | **1024 a 2048** (Escala analógica de 0-4095) |
 | **NPK** | Alto requisito de P e K. | **Todos OK** (Nenhum botão de N, P ou K pressionado) |
 
-## 🧠 Lógica de Decisão (C/C++)
+## 🚀 Instruções de Execução e Teste
 
-A lógica implementada garante que a bomba só seja acionada em condições de **necessidade** (água baixa) **E** **qualidade** (pH e NPK adequados). A rega é um evento de 3 segundos acionado pelo botão D4 (Gatilho).
+Para testar a lógica completa, utilize a seguinte sequência no simulador Wokwi:
 
-```cpp
-// A bomba SÓ liga se TODAS as condições forem TRUE.
+1.  **Iniciar:** Clique em **Start Simulation**.
+2.  **Preparação:** Mantenha os botões N, P e K **não pressionados**.
+3.  **Umidade (DHT22):** Ajuste o slider do DHT22 para um valor **ABAIXO de 35%** (ex: 20%).
+4.  **PH (LDR):** Insira ou faça a leitura do valor LDR via Monitor Serial para que ele fique **entre 1548 e 2548**.
+5.  **Gatilho:** Pressione o **Botão Vermelho (D4)**.
 
-bool precisa_regar = (umidade < UMIDADE_MINIMA); 
-bool ph_aceitavel = (leitura_ph >= 1024 && leitura_ph <= 2048); 
-bool npk_adequado = (N_OK && P_OK && K_OK); 
+**Resultado:** O LED Azul (Bomba) deve acender e o Monitor Serial deve exibir a mensagem **`>> REGANDO: Umidade Baixa, NPK e pH OK. <<`**.
 
-if (precisa_regar) {
-    if (npk_adequado && ph_aceitavel) {
-        // CONDIÇÃO PARA LIGAR A BOMBA: Água baixa E Qualidade OK.
-        digitalWrite(PINO_BOMBA, HIGH); 
-        // ... rega por 3 segundos
-    } else {
-        // CONDIÇÃO PARA NÃO REGAR: Umidade baixa, mas NPK ou PH Falhando.
-        digitalWrite(PINO_BOMBA, LOW); 
-    }
-} else {
-    // Umidade OK ou Alta.
-    digitalWrite(PINO_BOMBA, LOW);
-}
+---
 
 ## 📋 Licença
 

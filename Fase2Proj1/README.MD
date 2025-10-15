@@ -1,12 +1,12 @@
 # FIAP - Faculdade de Informática e Administração Paulista
 
 <p align="center">
-<a href= "https://www.fiap.com.br/"><img src="assets/logo-fiap.png" alt="FIAP - Faculdade de Informática e Admnistração Paulista" border="0" width=40% height=40%></a>
+<a href= "https://www.fiap.com.br/"><img src="CulturaMorango/assets/logo-fiap.png" alt="FIAP - Faculdade de Informática e Admnistração Paulista" border="0" width=40% height=40%></a>
 </p>
 
 <br>
 
-# Sistema de Monitoramento de Perdas na Colheita de Cana-de-Açúcar
+# 🍓 Sistema de Irrigação Inteligente para Morango (Wokwi/ESP32)
 
 ## Grupo: AgroTech Solutions
 
@@ -29,8 +29,6 @@
 
 ## 📜 Descrição
 
-# 🍓 Sistema de Irrigação Inteligente para Morango (Wokwi/ESP32)
-
 Este projeto simula um sistema de irrigação automatizado e inteligente, implementado em um ESP32 (Wokwi), focado nas necessidades específicas da cultura do **Morango** (*Fragaria × ananassa*). O objetivo é ligar a bomba d'água (LED azul) **apenas** quando o solo precisa de água e as condições de crescimento (NPK e pH) são ideais para a planta.
 
 ## ⚙️ Componentes e Pinos Utilizados
@@ -49,7 +47,7 @@ Este projeto simula um sistema de irrigação automatizado e inteligente, implem
 
 O diagrama a seguir demonstra as conexões físicas entre o ESP32, os sensores (DHT22 e LDR/pH), a bomba d'água (LED) e os botões NPK/Gatilho.
 
-![Diagrama de circuito do projeto de irrigação no Wokwi.com, mostrando as conexões do ESP32 com DHT22, LDR, LED azul e quatro botões.](assets/image_30894b.png)
+![Diagrama de circuito do projeto de irrigação no Wokwi.com, mostrando as conexões do ESP32 com DHT22, LDR, LED azul e quatro botões.](CulturaMorango/assets/image_30894b.png)
 
 ## 🌱 Especificações da Cultura: Morango
 

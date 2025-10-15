@@ -45,26 +45,6 @@ Este projeto simula um sistema de irrigação automatizado e inteligente, implem
 
 O diagrama a seguir demonstra as conexões físicas entre o ESP32, os sensores (DHT22 e LDR/pH), a bomba d'água (LED) e os botões NPK/Gatilho.
 
-# 🍓 Sistema de Irrigação Inteligente para Morango (Wokwi/ESP32)
-
-Este projeto simula um sistema de irrigação automatizado e inteligente, implementado em um ESP32 (Wokwi), focado nas necessidades específicas da cultura do **Morango** (*Fragaria × ananassa*). O objetivo é ligar a bomba d'água (LED azul) **apenas** quando o solo precisa de água e as condições de crescimento (NPK e pH) são ideais para a planta.
-
-## ⚙️ Componentes e Pinos Utilizados
-
-| Componente (Simulado) | Pino ESP32 (GPIO) | Função no Projeto |
-| :--- | :--- | :--- |
-| **Umidade** (DHT22) | **D23** | Sensor de Umidade e Temperatura. |
-| **PH** (LDR) | **D35 (ADC)** | Simula o pH do solo através da leitura analógica. |
-| **Bomba d'Água** (LED Azul) | **D18** | Saída para acionar a irrigação. |
-| **Nitrogênio (N)** | **D22** (Botão Verde 1) | Simula a presença/ausência do nutriente N (NPK OK = Não pressionado). |
-| **Fósforo (P)** | **D21** (Botão Verde 2) | Simula a presença/ausência do nutriente P (NPK OK = Não pressionado). |
-| **Potássio (K)** | **D19** (Botão Verde 3) | Simula a presença/ausência do nutriente K (NPK OK = Não pressionado). |
-| **Gatilho de Verificação** | **D4** (Botão Vermelho) | Inicia o ciclo de medição e decisão. |
-
-## 📸 Diagrama do Circuito (Wokwi.com)
-
-O diagrama a seguir demonstra as conexões físicas entre o ESP32, os sensores (DHT22 e LDR/pH), a bomba d'água (LED) e os botões NPK/Gatilho.
-
 ![Diagrama de circuito do projeto de irrigação no Wokwi.com, mostrando as conexões do ESP32 com DHT22, LDR, LED azul e quatro botões.](assets/image_30894b.png)
 
 ## 🌱 Especificações da Cultura: Morango

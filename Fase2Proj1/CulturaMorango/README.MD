@@ -65,8 +65,29 @@ O Morango é uma cultura sensível que requer solo **ácido** e umidade constant
 
 A lógica implementada garante que a bomba só seja acionada em condições de **necessidade** (água baixa) **E** **qualidade** (pH e NPK adequados). A rega é um evento de 3 segundos acionado pelo botão D4 (Gatilho).
 
+## 💻 Requisitos para Execução do Sistema de Irrigação
 
-## 🚀 Instruções de Execução e Teste
+Para garantir o funcionamento da lógica de irrigação do Morango no ESP32, o ambiente de desenvolvimento deve ser configurado corretamente.
+
+###   Ambiente de Desenvolvimento
+
+* **Hardware:** ESP32 DevKit V1 (ou equivalente).
+* **IDE:** PlatformIO (Recomendado) ou Arduino IDE.
+* **Simulação:** Plataforma Wokwi (Para testar o `diagram.json`).
+
+###  Pacotes Necessários (PlatformIO/Arduino)
+
+O código C/C++ (`prog1.ino`) requer as seguintes bibliotecas para ler o sensor DHT22:
+
+``` ini
+ Adicionar ao arquivo platformio.ini na seção lib_deps
+lib_deps =
+    adafruit/DHT sensor library@^1.4.6       
+    adafruit/Adafruit Unified Sensor@^1.1.15
+```
+
+
+### 🚀 Instruções de Execução e Teste
 
 Para testar a lógica completa, utilize a seguinte sequência no simulador Wokwi:
 
